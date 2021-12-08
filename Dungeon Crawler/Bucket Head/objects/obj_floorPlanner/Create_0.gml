@@ -2,6 +2,9 @@ floorPlan = false;
 floorHeight =  room_height / 8;
 floorWidth = room_width / 9;
 numberOfRooms = 8;
+
+floorLayouts = [spr_room1, spr_room2, spr_room3, spr_room4]
+
 show_debug_message("Lets get it started in here");
 
 for(var i = 0; i < 10; i++) {
@@ -11,7 +14,7 @@ for(var i = 0; i < 10; i++) {
 }
 
 floorPlan[3,3] = true;
-layer_sprite_create("Assets_1", floorWidth * 3, floorHeight * 3, spr_room1);
+layer_sprite_create("Assets_1", floorWidth * 3, floorHeight * 3, floorLayouts[irandom_range(0,3)]);
 
 while(numberOfRooms > 0){
 	for(var i = 0; i < 9; i++) {
@@ -20,14 +23,14 @@ while(numberOfRooms > 0){
 				
 				if(floorPlan[i+1, j] == true or floorPlan[i, j+1] == true ){
 					floorPlan[i, j] = true;
-					layer_sprite_create("Assets_1", floorWidth * i, floorHeight * j, spr_room1);
+					layer_sprite_create("Assets_1", floorWidth * i, floorHeight * j, floorLayouts[irandom_range(0,3)]);
 					show_debug_message(floorWidth *i);
 					numberOfRooms -=1;
 				}
 				else if(i > 0){
 					if(floorPlan[i-1, j] == true) {
 						floorPlan[i, j] = true;
-						layer_sprite_create("Assets_1", floorWidth * i, floorHeight * j, spr_room1);
+						layer_sprite_create("Assets_1", floorWidth * i, floorHeight * j, floorLayouts[irandom_range(0,3)]);
 						show_debug_message(floorWidth *i);
 						numberOfRooms -=1;
 					}
@@ -35,7 +38,7 @@ while(numberOfRooms > 0){
 				else if(j > 0) {
 					if(floorPlan[i, j-1] == true) {
 						floorPlan[i, j] = true;
-						layer_sprite_create("Assets_1", floorWidth * i, floorHeight * j, spr_room1);
+						layer_sprite_create("Assets_1", floorWidth * i, floorHeight * j, floorLayouts[irandom_range(0,3)]);
 						show_debug_message(floorWidth *i);
 						numberOfRooms -=1;
 					}
