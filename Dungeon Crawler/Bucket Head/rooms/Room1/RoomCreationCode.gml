@@ -1,2 +1,2 @@
-instance_create_layer(2688,1792,"Instances",obj_player);
+instance_create_layer(1344,896,"Instances",obj_player);
 randomize();
