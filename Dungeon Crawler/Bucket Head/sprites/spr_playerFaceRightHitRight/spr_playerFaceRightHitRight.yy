@@ -1,6 +1,6 @@
 {
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 5,
   "type": 0,
   "origin": 4,
   "preMultiplyAlpha": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7936e9a6-3a52-4b6a-a6c0-3f98fe8ac949","path":"sprites/spr_playerHitRight/spr_playerHitRight.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7936e9a6-3a52-4b6a-a6c0-3f98fe8ac949","path":"sprites/spr_playerHitRight/spr_playerHitRight.yy",},"LayerId":{"name":"9546bec2-a213-4635-a8ae-8792cf2068bc","path":"sprites/spr_playerHitRight/spr_playerHitRight.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_playerHitRight","path":"sprites/spr_playerHitRight/spr_playerHitRight.yy",},"resourceVersion":"1.0","name":"7936e9a6-3a52-4b6a-a6c0-3f98fe8ac949","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"7936e9a6-3a52-4b6a-a6c0-3f98fe8ac949","path":"sprites/spr_playerFaceRightHitRight/spr_playerFaceRightHitRight.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7936e9a6-3a52-4b6a-a6c0-3f98fe8ac949","path":"sprites/spr_playerFaceRightHitRight/spr_playerFaceRightHitRight.yy",},"LayerId":{"name":"9546bec2-a213-4635-a8ae-8792cf2068bc","path":"sprites/spr_playerFaceRightHitRight/spr_playerFaceRightHitRight.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_playerFaceRightHitRight","path":"sprites/spr_playerFaceRightHitRight/spr_playerFaceRightHitRight.yy",},"resourceVersion":"1.0","name":"7936e9a6-3a52-4b6a-a6c0-3f98fe8ac949","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_playerHitRight","path":"sprites/spr_playerHitRight/spr_playerHitRight.yy",},
+    "spriteId": {"name":"spr_playerFaceRightHitRight","path":"sprites/spr_playerFaceRightHitRight/spr_playerFaceRightHitRight.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9f1b1591-8ccc-4108-98be-4b9869f77211","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7936e9a6-3a52-4b6a-a6c0-3f98fe8ac949","path":"sprites/spr_playerHitRight/spr_playerHitRight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9f1b1591-8ccc-4108-98be-4b9869f77211","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7936e9a6-3a52-4b6a-a6c0-3f98fe8ac949","path":"sprites/spr_playerFaceRightHitRight/spr_playerFaceRightHitRight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_playerHitRight","path":"sprites/spr_playerHitRight/spr_playerHitRight.yy",},
+    "parent": {"name":"spr_playerFaceRightHitRight","path":"sprites/spr_playerFaceRightHitRight/spr_playerFaceRightHitRight.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_playerHitRight",
+    "name": "spr_playerFaceRightHitRight",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -69,11 +69,11 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "playerSprites",
+    "path": "folders/Sprites/playerSprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_playerHitRight",
+  "name": "spr_playerFaceRightHitRight",
   "tags": [],
   "resourceType": "GMSprite",
 }

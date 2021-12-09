@@ -3,7 +3,7 @@
     "name": "spr_vase",
     "path": "sprites/spr_vase/spr_vase.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

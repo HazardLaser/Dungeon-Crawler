@@ -3,7 +3,7 @@ show_debug_message(y);
 
 #region Movement
 if(!global.playerStunLock){
-	move_right=(keyboard_check(vk_right));
+	/*move_right=(keyboard_check(vk_right));
 	move_left=(keyboard_check(vk_left));
 	move_up=(keyboard_check(vk_up));
 	move_down=(keyboard_check(vk_down));
@@ -34,25 +34,69 @@ if(!global.playerStunLock){
 	}
 	else {
 		sprite_index= spr_playerIdle;
+	}*/
+	if(keyboard_check(vk_right) && place_free(x + collisionSpeed, y)){
+		x+=playerSpeed;
+		image_speed = playerSpeed;
+		sprite_index = spr_playerWalkRight;
+		directionFacing = 0;
+	}
+	if(keyboard_check(vk_left) && place_free(x - collisionSpeed, y)){
+		x-=playerSpeed;
+		image_speed = playerSpeed;
+		sprite_index = spr_playerWalkLeft;
+		directionFacing = 1;
+	}
+	if(keyboard_check(vk_up) && place_free(x, y - collisionSpeed)){
+		y-=playerSpeed;
+		image_speed = playerSpeed;
+		//sprite change up
+	}
+	if(keyboard_check(vk_down) && place_free(x, y + collisionSpeed)){
+		y+=playerSpeed;
+		image_speed = playerSpeed;
+		//sprite change down
+	}
+	if(keyboard_check(vk_nokey)){
+		image_speed = 0;
+		image_index = 0;
+		if(directionFacing == 0){
+			sprite_index = spr_playerWalkRight;	
+		}
+		if(directionFacing == 1){
+			sprite_index = spr_playerWalkLeft;	
+		}
 	}
 }
 #endregion
 
-#region Attack
+#region Punch Attack
 if(keyboard_check_pressed(ord("Z"))){
 	leftRightArm = !leftRightArm;
 	if(directionFacing == 0){
 		var punchX = (sprite_width * 0.8) 
 	}
 	else if(directionFacing == 1){
-		var punchX = (sprite_width * 0.8) 
+		var punchX = (sprite_width * -0.8) 
 	}
-	if(leftRightArm){
-		sprite_index = spr_playerHitRight;
+	if(directionFacing == 0){
+		
+		if(leftRightArm){
+			sprite_index = spr_playerFaceRightHitRight;
+		}
+		else{
+			sprite_index = spr_playerFaceRightHitLeft;
+		}
 	}
-	else{
-		sprite_index = spr_playerHitLeft;
+	else if(directionFacing == 1){
+		if(leftRightArm){
+			sprite_index = spr_playerFaceLeftHitRight;
+		}
+		else{
+			sprite_index = spr_playerFaceLeftHitLeft;
+		}
 	}
+	audio_play_sound(punchSound[irandom(array_length(punchSound)-1)], 10, 0);
 	instance_create_layer(x + punchX, y, "player",obj_playerHit);
 }
 #endregion

@@ -3,7 +3,7 @@
     "name": "spr_wallHorizontal",
     "path": "sprites/spr_wallHorizontal/spr_wallHorizontal.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": false,
   "spriteMaskId": null,
   "persistent": false,
