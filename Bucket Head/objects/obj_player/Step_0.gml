@@ -162,7 +162,9 @@ if(!cantHurt){
 	}
 }
 #endregion
+#region Health
 //this controls the health
+global.playerHealth = localHealth;
 if(instance_number(obj_playerHit) <= 0){
 	global.playerStunLock = false;
 }
@@ -170,3 +172,4 @@ if(localHealth <= 0){
 	//put destruction animation in here
 	instance_destroy(self)
 }
+#endregion

@@ -27,7 +27,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Obj_ment_for_a_spawn",
+  "name": "obj_ment_for_a_spawn",
   "tags": [],
   "resourceType": "GMObject",
 }
