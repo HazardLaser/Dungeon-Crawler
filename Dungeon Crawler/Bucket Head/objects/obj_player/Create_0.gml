@@ -1,6 +1,9 @@
 xped=0;
 ysped=0;
 
+cantHurt = false;
+localHealth = 3;
+
 playerSpeed = 2;
 //true is right left is false
 leftRightArm = true;
