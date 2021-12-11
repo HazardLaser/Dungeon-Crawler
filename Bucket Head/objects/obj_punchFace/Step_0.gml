@@ -1,11 +1,11 @@
 var distance = distance_to_object(obj_player);
 
 if(distance > playerRangeMax){
-	move_towards_point(obj_player.x, obj_player.y, punchFaceSpeed);
+	move_towards_point(obj_player.x, obj_player.y, movementSpeed);
 }
 else if(distance < playerRangeMin){
 	direction = point_direction(x,y,obj_player.x, obj_player.y) + 180;;
-	speed = punchFaceSpeed
+	speed = movementSpeed
 }
 else{
 	speed = 0;
