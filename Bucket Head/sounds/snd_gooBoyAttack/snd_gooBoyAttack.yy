@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_gooBoyAttack.mp3",
-  "duration": 1.453146,
+  "duration": 0.425146,
   "parent": {
     "name": "Enemy Sounds",
     "path": "folders/Sounds/Enemy Sounds.yy",

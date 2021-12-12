@@ -8,6 +8,7 @@ if(localHealth = 1){
 	}
 }
 if(localHealth = 0){
+	audio_play_sound(snd_vaseBreak, 10, false);
 	instance_destroy(self);
 }
 

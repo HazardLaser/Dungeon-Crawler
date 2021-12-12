@@ -6,3 +6,10 @@ ballRate = irandom_range(4,6);
 
 localHealth = 1;
 
+path = path_add();
+calcPathDelay = 30;
+calcPathTimer = irandom(60);
+
+//for the death sprite
+disabled = false;
+disabledOnce = false;

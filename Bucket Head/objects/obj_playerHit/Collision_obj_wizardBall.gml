@@ -1,2 +1,2 @@
-instance_destroy(other);
+other.disabled = true;
 instance_destroy(self);

@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Goblin",
+    "path": "folders/Sprites/Goblin.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_goblin",

@@ -12,3 +12,7 @@ directional = true;
 
 calcPathDelay = 30;
 calcPathTimer = irandom(60);
+
+//for the death sprite
+disabled = false;
+disabledOnce = false;

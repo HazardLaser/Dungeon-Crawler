@@ -1,1 +1,1 @@
-instance_destroy(self);
+disabled = true;

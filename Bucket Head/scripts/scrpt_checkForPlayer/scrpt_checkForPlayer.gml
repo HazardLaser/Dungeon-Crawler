@@ -13,3 +13,9 @@ function check_for_player(){
 		}
 	}
 }
+/*
+calcPathTimer
+calcPathDelay
+path
+movementSpeed
+*/

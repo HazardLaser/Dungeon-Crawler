@@ -1,10 +1,23 @@
-if(direction != point_direction(x,y,obj_player.x,obj_player.y)){
-	var difference = direction - point_direction(x,y,obj_player.x,obj_player.y);
-	if(difference > 0){
-		direction -= easing;	
+if(instance_exists(obj_player)){
+	alert = true;
+}
+else{
+	alert = false;
+}
+	
+if(!disabled){
+	if(alert){
+		check_for_player();
 	}
-	else if(difference < 0){
-		direction += easing;	
+	else{
+		path_end();
 	}
 }
-speed = 1.5;
+else{
+	if(!disabledOnce){
+		path_end();
+		sprite_index = Spr_projectile_death;
+		alarm[1] = room_speed*0.5;
+		disabledOnce = true;
+	}
+}

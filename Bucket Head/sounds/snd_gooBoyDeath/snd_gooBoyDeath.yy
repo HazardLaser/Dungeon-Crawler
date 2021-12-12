@@ -2,7 +2,7 @@
   "compression": 0,
   "volume": 1.0,
   "preload": false,
-  "bitRate": 128,
+  "bitRate": 512,
   "sampleRate": 44100,
   "type": 0,
   "bitDepth": 1,
@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_gooBoyDeath.mp3",
-  "duration": 0.439083,
+  "duration": 0.528833,
   "parent": {
     "name": "Enemy Sounds",
     "path": "folders/Sounds/Enemy Sounds.yy",
