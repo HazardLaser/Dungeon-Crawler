@@ -82,6 +82,7 @@
     {"id":{"name":"obj_gold","path":"objects/obj_gold/obj_gold.yy",},"order":3,},
     {"id":{"name":"Sprite6","path":"sprites/Sprite6/Sprite6.yy",},"order":5,},
     {"id":{"name":"spr_wizardCast","path":"sprites/spr_wizardCast/spr_wizardCast.yy",},"order":19,},
+    {"id":{"name":"spr_buttonTestSize","path":"sprites/spr_buttonTestSize/spr_buttonTestSize.yy",},"order":52,},
     {"id":{"name":"obj_verticalWallLong","path":"objects/obj_verticalWallLong/obj_verticalWallLong.yy",},"order":6,},
     {"id":{"name":"snd_goblinCharge","path":"sounds/snd_goblinCharge/snd_goblinCharge.yy",},"order":0,},
     {"id":{"name":"snd_punch4","path":"sounds/snd_punch4/snd_punch4.yy",},"order":3,},
