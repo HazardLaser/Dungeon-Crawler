@@ -172,4 +172,32 @@ for(i = 0; i < array_length(controllerArray); i++){
 }
 //print out for testing
 //no more testing here
+//spawn in boss
+var bestHolder = 0; 	
+if(array_length(mostEastRoom) > 1){
+	bestHolder = mostEastRoom[0];
+	for(i = 0; i < array_length(mostEastRoom); i++){
+		if(bestHolder.y > mostEastRoom[i].y){
+			bestHolder = mostEastRoom[i];
+		}
+	}
+	instance_create_layer(bestHolder.x + (floorWidth / 2), bestHolder.y + (floorHeight / 2), "enemies", obj_vase);
+}
+else{
+	instance_create_layer(mostEastRoom[0].x + (floorWidth / 2), mostEastRoom[0].y + (floorHeight / 2), "enemies", obj_vase);	
+}
+//reset variable
+//spawn player left bottom
+if(array_length(mostWestRoom) > 1){
+	bestHolder = mostWestRoom[0];
+	for(i = 0; i < array_length(mostWestRoom); i++){
+		if(bestHolder.y < mostWestRoom[i].y){
+			bestHolder = mostWestRoom[i];
+		}
+	}
+	instance_create_layer(bestHolder.x + (floorWidth / 2), bestHolder.y + (floorHeight / 2), "enemies", obj_player);
+}
+else{
+	instance_create_layer(mostWestRoom[0].x + (floorWidth / 2), mostWestRoom[0].y + (floorHeight / 2), "enemies", obj_player);	
+}
 #endregion
