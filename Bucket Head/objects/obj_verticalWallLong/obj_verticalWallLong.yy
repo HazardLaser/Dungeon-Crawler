@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_wallVertical",
-    "path": "sprites/spr_wallVertical/spr_wallVertical.yy",
+    "name": "spr_wallVerticalLong",
+    "path": "sprites/spr_wallVerticalLong/spr_wallVerticalLong.yy",
   },
   "solid": true,
   "visible": false,
@@ -28,7 +28,7 @@
     "path": "folders/Objects/Walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_verticalWall",
+  "name": "obj_verticalWallLong",
   "tags": [],
   "resourceType": "GMObject",
 }

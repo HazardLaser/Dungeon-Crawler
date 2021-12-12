@@ -7,7 +7,8 @@ var roomNorth = false;
 var roomWest = false;
 var roomSouth = false;
 var roomEast = false;
-floorLayouts = [spr_defaultRoom]
+floorLayouts = [spr_defaultRoom];
+controllerArray = [];
 
 #region layout
 show_debug_message("Lets get it started in here");
@@ -18,11 +19,12 @@ for(var i = 0; i < 10; i++) {
 	}
 }
 
-floorPlan[3,3] = true;				
+floorPlan[3,3] = true;			
+layer_sprite_create("Assets_1", floorWidth * 3, floorHeight * 3, floorLayouts[irandom(array_length(floorLayouts)-1)]);
 while(numberOfRooms > 0){
 	for(var i = 0; i < 9; i++) {
 		for(var j = 0; j < 8; j++) {
-			if(irandom(1) == 0 and floorPlan[i, j] != true and numberOfRooms > 0){
+			if(choose(0,1,2,4) == 0 and floorPlan[i, j] == false and numberOfRooms > 0){
 				
 				if(floorPlan[i+1, j] == true){
 					roomWest = true;
@@ -41,18 +43,10 @@ while(numberOfRooms > 0){
 					}
 				}
 				if(roomNorth or roomWest or roomSouth or roomEast){
-					floorPlan[i, j] = true;
 					layer_sprite_create("Assets_1", floorWidth * i, floorHeight * j, floorLayouts[irandom(array_length(floorLayouts)-1)]);
+					floorPlan[i, j] = true;
 					show_debug_message(floorWidth *i);
 					numberOfRooms -=1;
-					controller = instance_create_layer(floorWidth * i, floorHeight * j, "controllers", obj_roomController)
-					with controller {
-						controller.roomNorth = roomNorth;
-						controller.roomWest = roomWest;
-						controller.roomSouth = roomSouth;
-						controller.roomEast = roomEast;
-					}
-
 					show_debug_message("Room started");
 				}
 				else{
@@ -64,42 +58,118 @@ while(numberOfRooms > 0){
 				roomEast = false;
 			}
 			else{
-				floorPlan[i, j] = false;
+				//hey there
 			}
 		}
 	}
 	show_debug_message("Again");
 }
-if(floorPlan[3+1, 3] == true){
-	roomWest = true;
-}
-if(floorPlan[3, 3+1] == true){
-	roomNorth = true;
-}
-if(floorPlan[3-1, 3] == true){
-	roomEast = true;
-}
-if(floorPlan[3, 3-1] == true){
-	roomSouth = true;
-}
-if(roomNorth or roomWest or roomSouth or roomEast){
-	layer_sprite_create("Assets_1", floorWidth * 3, floorHeight * 3, floorLayouts[irandom(array_length(floorLayouts)-1)]);
-	controller = instance_create_layer(floorWidth * 3, floorHeight * 3, "controllers", obj_roomController)
-	with controller{
-		controller.roomNorth = roomNorth;
-		controller.roomWest = roomWest;
-		controller.roomSouth = roomSouth;
-		controller.roomEast = roomEast;
-	}
-}
-var roomNorth = false;
-var roomWest = false;
-var roomSouth = false;
-var roomEast = false;
 
-show_debug_message(numberOfRooms);
+for(var i = 0; i < 9; i++) {
+		for(var j = 0; j < 8; j++) {
+			if(floorPlan[i+1, j] == true){
+				roomWest = true;
+			}
+			else{
+				roomWest = false;	
+			}
+			if(floorPlan[i, j+1] == true){
+				roomNorth = true;
+			}
+			else{
+				roomNorth = false;	
+			}
+			if(i > 0){
+				if(floorPlan[i-1, j] == true){
+					roomEast = true;
+				}
+				else{
+					roomEast = false;	
+				}
+			}
+			if(j > 0){
+				if(floorPlan[i, j-1] == true){
+					roomSouth = true;
+				}
+				else{
+					roomSouth = false;	
+				}
+			}
+			if(floorPlan[i,j] == true){
+				controller = instance_create_layer(floorWidth * i, floorHeight * j, "controllers", obj_roomController)
+				theseWalls(controller.x, controller.y, roomNorth, roomWest, roomSouth, roomEast);
+				array_push(controllerArray, controller);
+			}
+			var roomNorth = false;
+			var roomWest = false;
+			var roomSouth = false;
+			var roomEast = false;
+
+			show_debug_message(numberOfRooms);
+		}
+}
 #endregion
 
-#region roomController
+#region roomMapping
+//Just get the numbers
+var ghost = instance_create_layer(floorWidth * 3, floorHeight * 3, "controllers", obj_ghostController);
+var mostNorthRoom = [ghost];
+var mostWestRoom = [ghost];
+var mostSouthRoom = [ghost];
+var mostEastRoom = [ghost];
 
+//Run through controller locations to know min maxs
+for(i = 0; i < array_length(controllerArray); i++){
+	//check the north
+	if(mostNorthRoom[0].y > controllerArray[i].y){
+		array_resize(mostNorthRoom, 0);
+		mostNorthRoom[0] = controllerArray[i];
+	}
+	else if(mostNorthRoom[0].y == controllerArray[i].y){
+		array_push(mostNorthRoom, controllerArray[i]);
+		if(mostNorthRoom[0] == ghost){
+			array_resize(mostNorthRoom, 0);
+			mostNorthRoom[0] = controllerArray[i];
+		}
+	}
+	//check the west
+	if(mostWestRoom[0].x > controllerArray[i].x){
+		array_resize(mostWestRoom, 0);
+		mostWestRoom[0] = controllerArray[i];
+	}
+	else if(mostWestRoom[0].x == controllerArray[i].x){
+		array_push(mostWestRoom, controllerArray[i]);
+		if(mostWestRoom[0] == ghost){
+			array_resize(mostWestRoom, 0);
+			mostWestRoom[0] = controllerArray[i];
+		}
+	}
+	//check the South
+	if(mostSouthRoom[0].y < controllerArray[i].y){
+		array_resize(mostSouthRoom, 0);
+		mostSouthRoom[0] = controllerArray[i];
+	}
+	else if(mostSouthRoom[0].y == controllerArray[i].y){
+		array_push(mostSouthRoom, controllerArray[i]);
+		if(mostSouthRoom[0] == ghost){
+			array_resize(mostSouthRoom, 0);
+			mostSouthRoom[0] = controllerArray[i];
+		}
+	}
+	//check the east
+	if(mostEastRoom[0].x < controllerArray[i].x){
+		array_resize(mostEastRoom, 0);
+		mostEastRoom[0] = controllerArray[i];
+	}
+	else if(mostEastRoom[0].x == controllerArray[i].x){
+		array_push(mostEastRoom, controllerArray[i]);
+		if(mostEastRoom[0] == ghost){
+			array_resize(mostEastRoom, 0);
+			mostEastRoom[0] = controllerArray[i];
+		}
+	}
+	
+}
+//print out for testing
+//no more testing here
 #endregion

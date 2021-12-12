@@ -28,7 +28,7 @@
   "creationCodeFile": "${project_dir}/rooms/Room1/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_3723C74C","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_3723C74C","path":"rooms/room_floor1/room_floor1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -56,7 +56,7 @@
     "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Room1",
+  "name": "room_floor1",
   "tags": [],
   "resourceType": "GMRoom",
 }

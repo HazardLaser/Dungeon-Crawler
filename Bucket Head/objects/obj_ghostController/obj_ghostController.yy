@@ -1,10 +1,7 @@
 {
-  "spriteId": {
-    "name": "spr_wallVertical",
-    "path": "sprites/spr_wallVertical/spr_wallVertical.yy",
-  },
-  "solid": true,
-  "visible": false,
+  "spriteId": null,
+  "solid": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -24,11 +21,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Walls",
-    "path": "folders/Objects/Walls.yy",
+    "name": "controllers",
+    "path": "folders/Objects/controllers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_verticalWall",
+  "name": "obj_ghostController",
   "tags": [],
   "resourceType": "GMObject",
 }
