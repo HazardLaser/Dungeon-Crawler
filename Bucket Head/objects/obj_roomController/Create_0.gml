@@ -46,3 +46,4 @@ else{
 }
 instance_create_layer(x + 360, y + 177, "walls", obj_verticalWall);
 #endregion
+show_debug_message("Room Made");

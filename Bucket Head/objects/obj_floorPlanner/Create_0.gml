@@ -45,11 +45,15 @@ while(numberOfRooms > 0){
 					layer_sprite_create("Assets_1", floorWidth * i, floorHeight * j, floorLayouts[irandom(array_length(floorLayouts)-1)]);
 					show_debug_message(floorWidth *i);
 					numberOfRooms -=1;
-					controller = instance_create_layer(floorWidth * i, floorHeight * j, "controllers", obj_roomController);
-					controller.roomNorth = roomNorth;
-					controller.roomWest = roomWest;
-					controller.roomSouth = roomSouth;
-					controller.roomEast = roomEast;
+					controller = instance_create_layer(floorWidth * i, floorHeight * j, "controllers", obj_roomController)
+					with controller {
+						controller.roomNorth = roomNorth;
+						controller.roomWest = roomWest;
+						controller.roomSouth = roomSouth;
+						controller.roomEast = roomEast;
+					}
+
+					show_debug_message("Room started");
 				}
 				else{
 					floorPlan[i, j] = false;
@@ -80,11 +84,13 @@ if(floorPlan[3, 3-1] == true){
 }
 if(roomNorth or roomWest or roomSouth or roomEast){
 	layer_sprite_create("Assets_1", floorWidth * 3, floorHeight * 3, floorLayouts[irandom(array_length(floorLayouts)-1)]);
-	controller = instance_create_layer(floorWidth * 3, floorHeight * 3, "controllers", obj_roomController);
-	controller.roomNorth = roomNorth;
-	controller.roomWest = roomWest;
-	controller.roomSouth = roomSouth;
-	controller.roomEast = roomEast;
+	controller = instance_create_layer(floorWidth * 3, floorHeight * 3, "controllers", obj_roomController)
+	with controller{
+		controller.roomNorth = roomNorth;
+		controller.roomWest = roomWest;
+		controller.roomSouth = roomSouth;
+		controller.roomEast = roomEast;
+	}
 }
 var roomNorth = false;
 var roomWest = false;
