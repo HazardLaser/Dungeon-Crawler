@@ -11,10 +11,10 @@
     {"id":{"name":"spr_wallVertical","path":"sprites/spr_wallVertical/spr_wallVertical.yy",},"order":16,},
     {"id":{"name":"obj_vase","path":"objects/obj_vase/obj_vase.yy",},"order":12,},
     {"id":{"name":"spr_room3","path":"sprites/spr_room3/spr_room3.yy",},"order":2,},
-    {"id":{"name":"room_splash","path":"rooms/room_splash/room_splash.yy",},"order":4,},
     {"id":{"name":"spr_doorwaySouth","path":"sprites/spr_doorwaySouth/spr_doorwaySouth.yy",},"order":43,},
     {"id":{"name":"spr_up_idle","path":"sprites/spr_up_idle/spr_up_idle.yy",},"order":10,},
     {"id":{"name":"obj_horizontalWall","path":"objects/obj_horizontalWall/obj_horizontalWall.yy",},"order":0,},
+    {"id":{"name":"room_test","path":"rooms/room_test/room_test.yy",},"order":1,},
     {"id":{"name":"obj_darkWizard","path":"objects/obj_darkWizard/obj_darkWizard.yy",},"order":0,},
     {"id":{"name":"spr_darkWizardPreCast","path":"sprites/spr_darkWizardPreCast/spr_darkWizardPreCast.yy",},"order":37,},
     {"id":{"name":"obj_playerHit","path":"objects/obj_playerHit/obj_playerHit.yy",},"order":14,},
@@ -50,7 +50,6 @@
     {"id":{"name":"spr_goblinWalkRight","path":"sprites/spr_goblinWalkRight/spr_goblinWalkRight.yy",},"order":1,},
     {"id":{"name":"obj_goblin","path":"objects/obj_goblin/obj_goblin.yy",},"order":1,},
     {"id":{"name":"spr_playerFaceRightHitLeft","path":"sprites/spr_playerFaceRightHitLeft/spr_playerFaceRightHitLeft.yy",},"order":0,},
-    {"id":{"name":"obj_bossVase","path":"objects/obj_bossVase/obj_bossVase.yy",},"order":25,},
     {"id":{"name":"snd_gooBoyDeath","path":"sounds/snd_gooBoyDeath/snd_gooBoyDeath.yy",},"order":3,},
     {"id":{"name":"spr_wallHorizontal","path":"sprites/spr_wallHorizontal/spr_wallHorizontal.yy",},"order":17,},
     {"id":{"name":"spr_darkWizardDeath","path":"sprites/spr_darkWizardDeath/spr_darkWizardDeath.yy",},"order":39,},
@@ -124,7 +123,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"room_floor1","path":"rooms/room_floor1/room_floor1.yy",},},
-    {"roomId":{"name":"room_splash","path":"rooms/room_splash/room_splash.yy",},},
+    {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
