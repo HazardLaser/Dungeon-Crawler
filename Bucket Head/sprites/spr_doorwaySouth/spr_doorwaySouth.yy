@@ -1,5 +1,5 @@
 {
-  "bboxMode": 0,
+  "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
   "origin": 0,
@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 23,
-  "bbox_top": 0,
-  "bbox_bottom": 78,
+  "bbox_right": 44,
+  "bbox_top": 19,
+  "bbox_bottom": 139,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 24,
-  "height": 79,
+  "width": 98,
+  "height": 24,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ba25328d-8814-483d-a3a8-e002d9bb6639","path":"sprites/spr_wallVertical/spr_wallVertical.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ba25328d-8814-483d-a3a8-e002d9bb6639","path":"sprites/spr_wallVertical/spr_wallVertical.yy",},"LayerId":{"name":"4bc3abbd-388c-402b-ab87-707e7ca28ccc","path":"sprites/spr_wallVertical/spr_wallVertical.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_wallVertical","path":"sprites/spr_wallVertical/spr_wallVertical.yy",},"resourceVersion":"1.0","name":"ba25328d-8814-483d-a3a8-e002d9bb6639","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","path":"sprites/spr_doorwaySouth/spr_doorwaySouth.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","path":"sprites/spr_doorwaySouth/spr_doorwaySouth.yy",},"LayerId":{"name":"455b0b20-c59e-47bf-bcc5-d25164fd8edd","path":"sprites/spr_doorwaySouth/spr_doorwaySouth.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_doorwaySouth","path":"sprites/spr_doorwaySouth/spr_doorwaySouth.yy",},"resourceVersion":"1.0","name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_wallVertical","path":"sprites/spr_wallVertical/spr_wallVertical.yy",},
+    "spriteId": {"name":"spr_doorwaySouth","path":"sprites/spr_doorwaySouth/spr_doorwaySouth.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3348e476-1968-46ce-a63c-1f14b496a0c4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ba25328d-8814-483d-a3a8-e002d9bb6639","path":"sprites/spr_wallVertical/spr_wallVertical.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1f696f37-edaf-4de5-b057-9bc5e946c0f9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","path":"sprites/spr_doorwaySouth/spr_doorwaySouth.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_wallVertical","path":"sprites/spr_wallVertical/spr_wallVertical.yy",},
+    "parent": {"name":"spr_doorwaySouth","path":"sprites/spr_doorwaySouth/spr_doorwaySouth.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_wallVertical",
+    "name": "spr_doorwaySouth",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4bc3abbd-388c-402b-ab87-707e7ca28ccc","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"455b0b20-c59e-47bf-bcc5-d25164fd8edd","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_wallVertical",
+  "name": "spr_doorwaySouth",
   "tags": [],
   "resourceType": "GMSprite",
 }

@@ -1,3 +1,4 @@
+randomize();
 floorPlan = false;
 floorHeight =  room_height / 8;
 floorWidth = room_width / 9;
@@ -17,9 +18,7 @@ for(var i = 0; i < 10; i++) {
 	}
 }
 
-floorPlan[3,3] = true;
-layer_sprite_create("Assets_1", floorWidth * 3, floorHeight * 3, floorLayouts[irandom(array_length(floorLayouts)-1)]);
-
+floorPlan[3,3] = true;				
 while(numberOfRooms > 0){
 	for(var i = 0; i < 9; i++) {
 		for(var j = 0; j < 8; j++) {
@@ -67,6 +66,31 @@ while(numberOfRooms > 0){
 	}
 	show_debug_message("Again");
 }
+if(floorPlan[3+1, 3] == true){
+	roomWest = true;
+}
+if(floorPlan[3, 3+1] == true){
+	roomNorth = true;
+}
+if(floorPlan[3-1, 3] == true){
+	roomEast = true;
+}
+if(floorPlan[3, 3-1] == true){
+	roomSouth = true;
+}
+if(roomNorth or roomWest or roomSouth or roomEast){
+	layer_sprite_create("Assets_1", floorWidth * 3, floorHeight * 3, floorLayouts[irandom(array_length(floorLayouts)-1)]);
+	controller = instance_create_layer(floorWidth * 3, floorHeight * 3, "controllers", obj_roomController);
+	controller.roomNorth = roomNorth;
+	controller.roomWest = roomWest;
+	controller.roomSouth = roomSouth;
+	controller.roomEast = roomEast;
+}
+var roomNorth = false;
+var roomWest = false;
+var roomSouth = false;
+var roomEast = false;
+
 show_debug_message(numberOfRooms);
 #endregion
 

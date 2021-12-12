@@ -2,7 +2,7 @@
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
-  "origin": 2,
+  "origin": 0,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 24,
-  "height": 99,
+  "width": 98,
+  "height": 24,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","path":"sprites/spr_doorway/spr_doorway.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","path":"sprites/spr_doorway/spr_doorway.yy",},"LayerId":{"name":"455b0b20-c59e-47bf-bcc5-d25164fd8edd","path":"sprites/spr_doorway/spr_doorway.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_doorway","path":"sprites/spr_doorway/spr_doorway.yy",},"resourceVersion":"1.0","name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","path":"sprites/spr_doorwayNorth/spr_doorwayNorth.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","path":"sprites/spr_doorwayNorth/spr_doorwayNorth.yy",},"LayerId":{"name":"455b0b20-c59e-47bf-bcc5-d25164fd8edd","path":"sprites/spr_doorwayNorth/spr_doorwayNorth.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_doorwayNorth","path":"sprites/spr_doorwayNorth/spr_doorwayNorth.yy",},"resourceVersion":"1.0","name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_doorway","path":"sprites/spr_doorway/spr_doorway.yy",},
+    "spriteId": {"name":"spr_doorwayNorth","path":"sprites/spr_doorwayNorth/spr_doorwayNorth.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c3ee0cd0-c523-4cec-a0b0-d54c3a216cc3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","path":"sprites/spr_doorway/spr_doorway.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"70638311-1cf7-4d2c-8ad9-58a560451017","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e5781a2-8d72-49c3-b394-00f01a63e1d1","path":"sprites/spr_doorwayNorth/spr_doorwayNorth.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,13 +54,13 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 24,
+    "xorigin": 0,
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_doorway","path":"sprites/spr_doorway/spr_doorway.yy",},
+    "parent": {"name":"spr_doorwayNorth","path":"sprites/spr_doorwayNorth/spr_doorwayNorth.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_doorway",
+    "name": "spr_doorwayNorth",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_doorway",
+  "name": "spr_doorwayNorth",
   "tags": [],
   "resourceType": "GMSprite",
 }

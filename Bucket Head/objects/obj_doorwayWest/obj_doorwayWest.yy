@@ -1,9 +1,9 @@
 {
   "spriteId": {
-    "name": "spr_wallHorizontal",
-    "path": "sprites/spr_wallHorizontal/spr_wallHorizontal.yy",
+    "name": "spr_doorwayWest",
+    "path": "sprites/spr_doorwayWest/spr_doorwayWest.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -28,7 +28,7 @@
     "path": "folders/Objects/Walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_horizontalWall",
+  "name": "obj_doorwayWest",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_doorway",
-    "path": "sprites/spr_doorway/spr_doorway.yy",
+    "name": "spr_doorwayEast",
+    "path": "sprites/spr_doorwayEast/spr_doorwayEast.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Walls",
+    "path": "folders/Objects/Walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_doorWay",
+  "name": "obj_doorwayEast",
   "tags": [],
   "resourceType": "GMObject",
 }
