@@ -12,3 +12,4 @@ mp_grid_add_instances(global.mp_grid,obj_pillar, false);
 mp_grid_add_instances(global.mp_grid,obj_horizontalWall, false);
 mp_grid_add_instances(global.mp_grid,obj_verticalWall, false);
 mp_grid_add_instances(global.mp_grid,obj_vase, true);
+mp_grid_add_instances(global.mp_grid,obj_verticalWallLong, false);

@@ -182,9 +182,11 @@ if(array_length(mostEastRoom) > 1){
 		}
 	}
 	instance_create_layer(bestHolder.x + (floorWidth / 2), bestHolder.y + (floorHeight / 2), "enemies", obj_bossVase);
+	instance_destroy(bestHolder);
 }
 else{
 	instance_create_layer(mostEastRoom[0].x + (floorWidth / 2), mostEastRoom[0].y + (floorHeight / 2), "enemies", obj_bossVase);	
+	instance_destroy(mostEastRoom[0]);
 }
 //reset variable
 //spawn player left bottom
@@ -196,8 +198,11 @@ if(array_length(mostWestRoom) > 1){
 		}
 	}
 	instance_create_layer(bestHolder.x + (floorWidth / 2), bestHolder.y + (floorHeight / 2), "enemies", obj_player);
+	instance_destroy(bestHolder);
 }
 else{
-	instance_create_layer(mostWestRoom[0].x + (floorWidth / 2), mostWestRoom[0].y + (floorHeight / 2), "enemies", obj_player);	
+	instance_create_layer(mostWestRoom[0].x + (floorWidth / 2), mostWestRoom[0].y + (floorHeight / 2), "enemies", obj_player);
+	instance_destroy(mostWestRoom[0]);
 }
+
 #endregion

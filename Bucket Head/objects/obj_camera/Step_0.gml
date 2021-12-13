@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if(object_exists(obj_player)){
 #region HORIZONTAL
 
 	var left_border = view_x;
@@ -31,3 +31,4 @@
 camera_set_view_pos(camera, view_width * (segment_x - 1), view_height *(segment_y - 1));
 view_x = camera_get_view_x(camera);
 view_y = camera_get_view_y(camera);
+}

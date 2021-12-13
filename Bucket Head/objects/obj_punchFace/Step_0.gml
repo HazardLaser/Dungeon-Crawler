@@ -1,5 +1,5 @@
 if(!disabled){
-	if(instance_exists(obj_player)){
+	if(alert){
 		var distance = distance_to_object(obj_player);
 		var tx = x + lengthdir_x(speed, direction);
 		var ty = y + lengthdir_y(speed, direction);

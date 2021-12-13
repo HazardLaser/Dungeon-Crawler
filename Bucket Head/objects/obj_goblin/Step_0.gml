@@ -1,10 +1,4 @@
 if(!disabled){
-if(instance_exists(obj_player)){
-alert = true;
-}
-else{
-	alert = false
-}
 #region Health
 if(localHealth <= 0){
 	//put destruction animation in here
