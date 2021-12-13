@@ -1,6 +1,6 @@
 //show_debug_message(x);
 //show_debug_message(y);
-
+if(!disabled){
 #region Movement
 if(!global.playerStunLock){
 	/*move_right=(keyboard_check(vk_right));
@@ -100,22 +100,22 @@ if(!cantHurt){
 		if(directionFacing == 0){
 			var punchX = 24 * 0.8; 
 			var punchY = 0;
-			var imageRotation = 0;
+			imageRotation = 0;
 		}
 		else if(directionFacing == 1){
 			var punchX = 24 * -0.8;
 			var punchY = 0;
-			var imageRotation = 0;
+			imageRotation = 0;
 		}
 		if(directionFacing == 2){
 			var punchX = 0;
 			var punchY = 24 * -0.8;
-			var imageRotation = 90;
+			imageRotation = 90;
 		}
 		else if(directionFacing == 3){
 			var punchX = 0;
 			var punchY = 24 * 0.8;
-			var imageRotation = 90;
+			imageRotation = 90;
 		}
 		//add in sprite height for the other direction facing
 		//give sprite index based on which direction facing
@@ -155,21 +155,34 @@ if(!cantHurt){
 			}
 		}
 		//play random sound for effect
-		audio_play_sound(punchSound[irandom(array_length(punchSound)-1)], 10, 0);
+		audio_play_sound(punchSound[irandom(array_length(punchSound)-1)], 5, 0);
 		//creates hurt box
 		var hitBox = instance_create_layer(x + punchX, y + punchY, "player",obj_playerHit);
 		hitBox.image_angle += imageRotation;
 	}
 }
 #endregion
+}
+else if(disabled){
+	if(!disabledOnce){
+		sprite_index = spr_playerDeath;
+		alarm[1] = room_speed*0.25;
+		disabledOnce = true;
+		global.win = false;
+	}
+}
 #region Health
 //this controls the health
 global.playerHealth = localHealth;
 if(instance_number(obj_playerHit) <= 0){
 	global.playerStunLock = false;
 }
+
 if(localHealth <= 0){
 	//put destruction animation in here
-	instance_destroy(self)
+	disabled = true;
+	audio_stop_sound(snd_gameMusic);
+	global.won = true;
+	
 }
 #endregion

@@ -1,7 +1,8 @@
-
+imageRotation = 0;
 cantHurt = false;
 localHealth = 3;
-
+disabled = false;
+disabledOnce=false;
 playerSpeed = 2;
 //true is right left is false
 leftRightArm = true;

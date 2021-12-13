@@ -13,3 +13,7 @@ mp_grid_add_instances(global.mp_grid,obj_horizontalWall, false);
 mp_grid_add_instances(global.mp_grid,obj_verticalWall, false);
 mp_grid_add_instances(global.mp_grid,obj_vase, true);
 mp_grid_add_instances(global.mp_grid,obj_verticalWallLong, false);
+mp_grid_add_instances(global.mp_grid,obj_lockNorth, false);
+mp_grid_add_instances(global.mp_grid,obj_lockWest, false);
+mp_grid_add_instances(global.mp_grid,obj_lockSouth, false);
+mp_grid_add_instances(global.mp_grid,obj_lockEast, false);

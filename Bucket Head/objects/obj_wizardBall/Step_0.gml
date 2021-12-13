@@ -15,6 +15,7 @@ if(!disabled){
 }
 else{
 	if(!disabledOnce){
+		audio_play_sound(snd_splosh, 5, false);
 		path_end();
 		sprite_index = Spr_projectile_death;
 		alarm[1] = room_speed*0.5;

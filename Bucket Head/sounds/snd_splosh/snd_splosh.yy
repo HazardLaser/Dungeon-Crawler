@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 1.0,
+  "volume": 0.65,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_splosh",
-  "duration": 0.0,
+  "soundFile": "snd_splosh.wav",
+  "duration": 1.367415,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

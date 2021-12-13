@@ -11,7 +11,6 @@ floorLayouts = [spr_defaultRoom];
 controllerArray = [];
 
 #region layout
-show_debug_message("Lets get it started in here");
 
 for(var i = 0; i < 10; i++) {
 	for(var j = 0; j < 9; j++) {
@@ -45,9 +44,7 @@ while(numberOfRooms > 0){
 				if(roomNorth or roomWest or roomSouth or roomEast){
 					layer_sprite_create("Assets_1", floorWidth * i, floorHeight * j, floorLayouts[irandom(array_length(floorLayouts)-1)]);
 					floorPlan[i, j] = true;
-					show_debug_message(floorWidth *i);
 					numberOfRooms -=1;
-					show_debug_message("Room started");
 				}
 				else{
 					floorPlan[i, j] = false;
@@ -62,7 +59,6 @@ while(numberOfRooms > 0){
 			}
 		}
 	}
-	show_debug_message("Again");
 }
 
 for(var i = 0; i < 9; i++) {
@@ -105,7 +101,6 @@ for(var i = 0; i < 9; i++) {
 			var roomSouth = false;
 			var roomEast = false;
 
-			show_debug_message(numberOfRooms);
 		}
 }
 #endregion
@@ -198,10 +193,47 @@ if(array_length(mostWestRoom) > 1){
 		}
 	}
 	instance_create_layer(bestHolder.x + (floorWidth / 2), bestHolder.y + (floorHeight / 2), "enemies", obj_player);
+	instance_create_layer(bestHolder.x + 296, bestHolder.y + 205, "objects", obj_billBoardMovement);
+	instance_create_layer(bestHolder.x + 88, bestHolder.y + 205, "objects", obj_billBoardZ);
+	instance_create_layer(bestHolder.x + 32, bestHolder.y + 87, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 32, bestHolder.y + 120, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 32, bestHolder.y + 136, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 32, bestHolder.y + 169, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 352, bestHolder.y + 87, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 352, bestHolder.y + 120, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 352, bestHolder.y + 136, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 352, bestHolder.y + 169, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 151, bestHolder.y + 32, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 184, bestHolder.y + 32, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 200, bestHolder.y + 32, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 233, bestHolder.y + 32, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 151, bestHolder.y + 224, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 184, bestHolder.y + 224, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 200, bestHolder.y + 224, "objects", obj_vase);
+	instance_create_layer(bestHolder.x + 233, bestHolder.y + 224, "objects", obj_vase);
+	
 	instance_destroy(bestHolder);
 }
 else{
 	instance_create_layer(mostWestRoom[0].x + (floorWidth / 2), mostWestRoom[0].y + (floorHeight / 2), "enemies", obj_player);
+	instance_create_layer(mostWestRoom[0].x + 296, mostWestRoom[0].y + 205, "objects", obj_billBoardMovement);
+	instance_create_layer(mostWestRoom[0].x + 88, mostWestRoom[0].y + 205, "objects", obj_billBoardZ);
+	instance_create_layer(mostWestRoom[0].x + 32, mostWestRoom[0].y + 87, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 32, mostWestRoom[0].y + 120, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 32, mostWestRoom[0].y + 136, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 32, mostWestRoom[0].y + 169, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 352, mostWestRoom[0].y + 87, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 352, mostWestRoom[0].y + 120, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 352, mostWestRoom[0].y + 136, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 352, mostWestRoom[0].y + 169, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 151, mostWestRoom[0].y + 32, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 184, mostWestRoom[0].y + 32, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 200, mostWestRoom[0].y + 32, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 233, mostWestRoom[0].y + 32, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 151, mostWestRoom[0].y + 224, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 184, mostWestRoom[0].y + 224, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 200, mostWestRoom[0].y + 224, "objects", obj_vase);
+	instance_create_layer(mostWestRoom[0].x + 233, mostWestRoom[0].y + 224, "objects", obj_vase);
 	instance_destroy(mostWestRoom[0]);
 }
 

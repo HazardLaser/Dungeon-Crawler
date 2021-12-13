@@ -14,11 +14,11 @@ function damaging(object){
 				invincible(object);
 			}
 			object.localHealth -= 1;
-			show_debug_message("Hit Player " + string(object.localHealth));
+			audio_play_sound(snd_playerHurt, 10, false);
 		}
 	}
 	else{
 		object.localHealth -= 1;
-		show_debug_message("Hit Player " + string(object.localHealth));
+		
 	}
 }
