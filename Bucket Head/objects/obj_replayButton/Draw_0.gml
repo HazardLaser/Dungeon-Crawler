@@ -9,4 +9,9 @@ else{
 	draw_text(24,24,"GAME OVER!");
 }
 draw_set_font(fnt_CodersCrux);
-draw_text(24,64, "Coins: " + string(global.money) + "\nEnemies: " + string(global.enemiesDefeated) + "\nTime: " + string(global.minute) + ":" + string(global.second));
+if(global.second < 10){
+	draw_text(24,64, "Coins: " + string(global.money) + "\nEnemies: " + string(global.enemiesDefeated) + "\nTime: " + string(global.minute) + ":0" + string(global.second));
+}
+else{
+	draw_text(24,64, "Coins: " + string(global.money) + "\nEnemies: " + string(global.enemiesDefeated) + "\nTime: " + string(global.minute) + ":" + string(global.second));
+}

@@ -19,4 +19,9 @@ draw_sprite(spr_GUIBackground, 0, 896, 0);
 draw_set_color(c_white)
 draw_set_font(fnt_CodersCruxBig);
 draw_set_valign(fa_middle);
-draw_text(906, 50, "Time: " + string(global.minute) + ":" + string(global.second));
+if(global.second < 10){
+	draw_text(906, 50, "Time: " + string(global.minute) + ":0" + string(global.second));
+}
+else{
+	draw_text(906, 50, "Time: " + string(global.minute) + ":" + string(global.second));
+}

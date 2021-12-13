@@ -113,6 +113,11 @@ if(summon and !once){
 			
 			break;
 		case 5:
+			//pillars
+			instance_create_layer(x+96,y+128, "objects", obj_pillar);
+			instance_create_layer(x+128,y+64, "objects", obj_pillar);
+			instance_create_layer(x+256,y+64, "objects", obj_pillar);
+			instance_create_layer(x+288,y+128, "objects", obj_pillar);
 			//vase
 			instance_create_layer(x+64,y+192, "objects", obj_vase);
 			instance_create_layer(x+32,y+64, "objects", obj_vase);
@@ -121,20 +126,19 @@ if(summon and !once){
 			instance_create_layer(x+320,y+224, "objects", obj_vase);
 			instance_create_layer(x+352,y+192, "objects", obj_vase);
 			instance_create_layer(x+288,y+64, "objects", obj_vase);
-			//pillars
-			instance_create_layer(x+96,y+128, "objects", obj_pillar);
-			instance_create_layer(x+128,y+64, "objects", obj_pillar);
-			instance_create_layer(x+256,y+64, "objects", obj_pillar);
-			instance_create_layer(x+288,y+128, "objects", obj_pillar);
+			
 			//punchFace
 			array_push(enemies, instance_create_layer(x+96,y+192, "enemies", obj_punchFace));
 			array_push(enemies, instance_create_layer(x+288,y+192, "enemies", obj_punchFace));
 			//wizards
-			array_push(enemies, instance_create_layer(x+192,y+192, "enemies", obj_darkWizard));
+			array_push(enemies, instance_create_layer(x+192,y+162, "enemies", obj_darkWizard));
 			array_push(enemies, instance_create_layer(x+320,y+96, "enemies", obj_darkWizard));
 			array_push(enemies, instance_create_layer(x+64,y+96, "enemies", obj_darkWizard));
 			break;
 		case 6:
+			//pillar
+			instance_create_layer(x+128,y+128, "objects", obj_pillar);
+			instance_create_layer(x+128,y+128, "objects", obj_pillar);
 			//vase
 			instance_create_layer(x+32,y+224, "objects", obj_vase);
 			instance_create_layer(x+64,y+192, "objects", obj_vase);
@@ -142,9 +146,7 @@ if(summon and !once){
 			instance_create_layer(x+256,y+192, "objects", obj_vase);
 			instance_create_layer(x+320,y+192, "objects", obj_vase);
 			instance_create_layer(x+320,y+32, "objects", obj_vase);
-			//pillar
-			instance_create_layer(x+128,y+128, "objects", obj_pillar);
-			instance_create_layer(x+128,y+128, "objects", obj_pillar);
+			
 			//food
 			instance_create_layer(x+192,y+128, "objects", obj_food);
 			//punchface
@@ -157,6 +159,8 @@ if(summon and !once){
 			array_push(enemies,instance_create_layer(x+288,y+192, "enemies", obj_goblin));
 			break;
 		case 7:
+			//pillar
+			instance_create_layer(x+296, y+200, "objects",obj_pillar);
 			//coins
 			instance_create_layer(x+168, y+104, "objects", obj_gold);
 			instance_create_layer(x+192, y+99, "objects", obj_gold);
@@ -172,8 +176,7 @@ if(summon and !once){
 			instance_create_layer(x+240, y+134, "objects", obj_gold);
 			instance_create_layer(x+216, y+152, "objects", obj_gold);
 			instance_create_layer(x+218, y+168, "objects", obj_gold);
-			//pillar
-			instance_create_layer(x+296, y+200, "objects",obj_pillar);
+			
 			//goblin
 			array_push(enemies, instance_create_layer(x+144, y+128, "enemies", obj_goblin));
 			array_push(enemies, instance_create_layer(x+176, y+128, "enemies", obj_goblin));
@@ -189,14 +192,7 @@ if(summon and !once){
 			array_push(enemies, instance_create_layer(x+344, y+40, "enemies", obj_darkWizard));
 			break;
 		case 8:
-			//vase
-			instance_create_layer(x+320,y+192, "objects", obj_vase);
-			instance_create_layer(x+228,y+96, "objects", obj_vase);
-			instance_create_layer(x+192,y+64, "objects", obj_vase);
-			//gold
-			instance_create_layer(x+224,y+128, "objects", obj_gold);
-			//food
-			instance_create_layer(x+64,y+192, "objects", obj_food);
+			
 			//pillars
 			instance_create_layer(x+64,y+192, "objects", obj_pillar);
 			instance_create_layer(x+96,y+128, "objects", obj_pillar);
@@ -208,12 +204,19 @@ if(summon and !once){
 			instance_create_layer(x+288,y+196, "objects", obj_pillar);
 			instance_create_layer(x+320,y+64, "objects", obj_pillar);
 			instance_create_layer(x+320,y+192, "objects", obj_pillar);
+			//vase
+			instance_create_layer(x+320,y+192, "objects", obj_vase);
+			instance_create_layer(x+228,y+96, "objects", obj_vase);
+			instance_create_layer(x+192,y+64, "objects", obj_vase);
+			//gold
+			instance_create_layer(x+224,y+128, "objects", obj_gold);
+			//food
+			instance_create_layer(x+64,y+192, "objects", obj_food);
 			//wizards
-			array_push(enemies,instance_create_layer(x+256,y+192, "enemies", obj_darkWizard));
-			array_push(enemies,instance_create_layer(x+160,y+192, "enemies", obj_darkWizard));
-			array_push(enemies,instance_create_layer(x+96,y+128, "enemies", obj_darkWizard));
-			array_push(enemies,instance_create_layer(x+64,y+64, "enemies", obj_darkWizard));
-			array_push(enemies,instance_create_layer(x+320,y+24, "enemies", obj_darkWizard));
+			array_push(enemies,instance_create_layer(x+256,y+176, "enemies", obj_darkWizard));
+			array_push(enemies,instance_create_layer(x+160,y+176, "enemies", obj_darkWizard));
+			array_push(enemies,instance_create_layer(x+96,y+112, "enemies", obj_darkWizard));
+			array_push(enemies,instance_create_layer(x+64,y+48, "enemies", obj_darkWizard));
 			break;
 		case 9:
 			//food
